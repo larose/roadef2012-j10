@@ -1,0 +1,100 @@
+--------------------
+-- roadef2012-j10 --
+--------------------
+
+This is the submission of team J10 for the ROADEF Challenge 2012:
+Machine Reassignment. (See subject.pdf for a complete description of
+the problem) Our approach implements an Iterated Local Search based on
+a neighborhood which move one process at a time.
+
+
+------------
+-- Author --
+------------
+
+Mathieu Larose <mathieu.larose.ml@gmail.com>
+
+
+-------------
+-- License --
+-------------
+
+roadef2012-j10 is released under the MIT License. (See LICENSE)
+
+
+------------------
+-- Dependencies --
+------------------
+
+libboost 1.46+
+
+
+------------------------------
+-- Compiling roadef2012-j10 --
+------------------------------
+
+roadef2012-j10 uses the GNU Build System (Autotools). 
+
+Note: The first step may be optional depending whether you cloned the
+repository or downloaded the tarball.
+
+
+    autoreconf --install
+
+    ./configure (or `./configure CXXFLAGS="-O3"` to enable optimizations)
+
+    make
+
+
+----------------------------
+-- Running roadef2012-j10 --
+----------------------------
+
+    --------------------------
+    -- Mandatory Parameters --
+    --------------------------
+
+    -t <time_limit>: to stop the program execution after <time_limit>
+     seconds.
+
+    -p <instance_filename>: to load the data associated with the
+     instance <instance_filename>.
+
+    -i <original_solution_filename>: to designate the file with the
+     reference solution.
+
+    -o <new_solution_filename>: to designate the result file.
+
+    -s <seed>: seed used to initialize the pseudorandom number
+     generator.
+
+
+     See http://challenge.roadef.org/2012/en/reponse.php for more
+     details.
+
+
+    -------------------------
+    -- Optional Parameters --
+    -------------------------
+
+    -a <pertubation_percent>: Number of moves (expressed in percentage
+     of the number of processes) performed during the pertubation.
+
+    -b <num_processes>: Number of processes evaluated during the local search.
+
+    -c <max_num_iter>: Maximum number of iterations without
+     improvement.
+
+    -d <num_threads>: Number of threads.
+
+    -e <num_machines>: Number of machines (per process) evaluated
+     during the local search.
+
+    -f <num_attempt>: Number of attempts before the local search stops.
+
+
+    --------------
+    -- Examples --
+    --------------
+
+    ./src/roadef2012-j10 -t 300 -p instances/model_a1_3.txt -i instances/assignment_a1_3.txt -o /tmp/sol -s 333 -d 1
