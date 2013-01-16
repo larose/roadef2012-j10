@@ -93,8 +93,8 @@ repository or downloaded the tarball.
     -f <num_attempt>: Number of attempts before the local search stops.
 
 
-    --------------
-    -- Examples --
-    --------------
+    -------------
+    -- Example --
+    -------------
 
     ./src/roadef2012-j10 -t 300 -p instances/model_a1_3.txt -i instances/assignment_a1_3.txt -o /tmp/sol -s 333 -d 1
